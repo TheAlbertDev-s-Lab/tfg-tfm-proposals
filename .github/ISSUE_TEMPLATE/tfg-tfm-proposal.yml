@@ -1,0 +1,97 @@
+name: "📚 TFG/TFM Proposal"
+description: Propose a new Bachelor's or Master's Thesis topic.
+type: "Proposal"
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thank you for proposing a TFG/TFM topic. Please fill in the form below with as much detail as possible.
+
+  - type: input
+    id: year
+    attributes:
+      label: Academic year
+      description: Academic year this proposal is for.
+      placeholder: "E.g.: 2026/2027"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: period
+    attributes:
+      label: Period
+      description: Quarter in which the thesis is expected to start or take place.
+      options:
+        - 1st quarter
+        - 2nd quarter
+        - 3rd quarter
+        - 4th quarter
+    validations:
+      required: true
+
+  - type: input
+    id: title
+    attributes:
+      label: Proposal title
+      description: A short, descriptive title for the thesis topic.
+      placeholder: "E.g.: Anomaly detection system for time series using AI"
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Describe the context, goals, and scope of the work.
+      placeholder: |
+        - Context and motivation
+        - Main objectives
+        - Expected scope of the work
+    validations:
+      required: true
+
+  - type: textarea
+    id: prerequisites
+    attributes:
+      label: Prerequisites
+      description: Recommended knowledge, coursework, or skills for the student.
+      placeholder: "E.g.: Python programming, basic Machine Learning knowledge..."
+    validations:
+      required: false
+
+  - type: input
+    id: technologies
+    attributes:
+      label: Technologies / tools
+      description: Languages, frameworks, or tools that will be used.
+      placeholder: "E.g.: Python, PyTorch, Docker"
+    validations:
+      required: false
+
+  - type: input
+    id: supervisor
+    attributes:
+      label: Supervisor
+      description: Name of the supervisor(s) responsible for this proposal.
+      placeholder: "E.g.: Dr. Jane Doe"
+    validations:
+      required: true
+
+  - type: dropdown
+    id: modality
+    attributes:
+      label: Modality
+      options:
+        - On-site
+        - Remote
+        - Hybrid
+    validations:
+      required: false
+
+  - type: textarea
+    id: additional-info
+    attributes:
+      label: Additional information
+      description: Any other relevant details (company collaboration, scholarship availability, publications, etc.)
+    validations:
+      required: false
